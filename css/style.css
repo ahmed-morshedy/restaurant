@@ -238,6 +238,50 @@ nav {
   }
 }
 
+.contact {
+  background-color: var(--dark-color);
+  padding: 40px 20px;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    .info {
+      margin-bottom: 20px;
+      h1,
+      p {
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+      }
+      h1 {
+        font-size: 40px;
+      }
+    }
+    .mail {
+      padding: 5px;
+      background-color: white;
+      width: fit-content;
+      border-radius: 5px;
+      input {
+        height: 30px;
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        color: var(--dark-color);
+        font-weight: bold;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 14px;
+        svg {
+          color: var(--dark-color);
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
 /* Start Media */
 @media (max-width: 1300px) {
 }
@@ -332,6 +376,11 @@ nav {
   .our-menu {
     .container {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .contact {
+    .container {
+      grid-template-columns: 1fr;
     }
   }
 }
